@@ -1,0 +1,7 @@
+---
+docker_user: '{{ ansible_ssh_user }}'
+ubuntu_version: trusty
+docker_hub_access: no
+
+docker_compose_version: 1.7.1
+docker_engine_version: 1.11.1

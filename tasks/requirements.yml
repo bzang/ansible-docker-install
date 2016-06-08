@@ -1,0 +1,11 @@
+- name: Install Base Requirements
+  become: yes
+  become_method: sudo
+  apt: name={{ item }} update_cache=yes
+  with_items:
+    - python-pip
+    - python-dev
+    - python-setuptools
+    - apt-transport-https
+    - ca-certificates
+    - apparmor
