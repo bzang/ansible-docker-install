@@ -11,14 +11,14 @@
   become: yes
   become_method: sudo
   apt_repository:
-    repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ubuntu_name }} main'
+    repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ubuntu_version }} main'
     state: present
 
 - name: Import the Docker repository key
   become: yes
   become_method: sudo
   apt_key:
-    key_server: p80.pool.sks-keyservers.net
+    keyserver: p80.pool.sks-keyservers.net
     state: present
     id: 58118E89F3A912897C070ADBF76221572C52609D
 
