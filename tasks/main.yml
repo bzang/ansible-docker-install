@@ -11,7 +11,7 @@
   become: yes
   become_method: sudo
   apt_repository:
-    repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ubuntu_name }} main'
+    repo: 'deb https://apt.dockerproject.org/repo ubuntu-{{ ubuntu_version }} main'
     state: present
 
 - name: Import the Docker repository key
